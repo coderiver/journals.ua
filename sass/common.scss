@@ -1,0 +1,250 @@
+@import "base";
+* { margin:0; padding:0; -webkit-text-size-adjust: none; }
+body {
+	background: #ececec;
+	font: {
+	  family: Tahoma, Arial,sans-serif;
+	  weight: normal;
+	  size: 12px;
+	}
+	line-height:1.4;
+}
+// resets
+a img, fieldset {
+	border:none;
+}
+a {
+	color: #37559a;
+	text-decoration:none;
+}
+li {
+	list-style: none;
+}
+input, textarea, button {
+	border: none;
+	outline: none;
+	font-family: Arial,sans-serif;
+}
+button {
+	line-height: 1;
+	cursor: pointer;
+}
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+// common styles
+.h2 {
+	font-family: Georgia, Tahoma, sans-serif;
+	font-size: 16px;
+	color: #050000;
+}
+.wrap {	
+	width: 1060px;
+	margin: 0 auto;
+	background: #fff;
+	border: 1px solid #d0d0d0;
+	border-width: 0	1px 0 1px;
+}
+//top 
+.top-wrap {	
+	background: #5a5a5a;
+	border-bottom: 2px solid #ff0000;
+}
+.top {
+	width: 1010px;
+	margin: 0 auto;
+	padding: 20px 25px;
+	overflow: hidden;
+}
+//nav
+.nav {
+	float: left;
+	margin-top: 3px;
+	ul {		
+		overflow: hidden;
+	}
+	li {
+		float: left;
+		height: 15px;
+		padding: 0 8px;
+		line-height: 15px;
+		border-left: 1px solid #adadad;
+		&:first-child {
+			border: none;
+			padding: 0 8px 0 0;
+		}
+	}
+	a {
+		font-family: Georgia, Tahoma, sans-serif;
+		font-size: 11px;
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+//enter
+.enter {
+	float: right;
+	color: #fff;
+	font-size: 11px;
+	li {
+		float: left;
+		height: 18px;
+		padding: 0 12px;
+		border-left: 1px solid #8b8c8d;
+		&:first-child {
+			border: none;
+		}
+		&.cart-link {
+			padding: 0 0 0 12px;
+		}
+	}
+	a {		
+		color: #fff;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.enter__social {
+	margin-top: 1px;
+	overflow: hidden;
+	li {
+		padding: 0;
+		margin: 0 2px 0 0;
+		border: none;
+	}
+	a {
+		display: block;
+	}
+	span {
+		margin-right: 5px;
+	}	
+}
+.enter__fb {
+	@include sized-sprite($icons, fb);
+}
+.enter__gg {
+	@include sized-sprite($icons, gg);
+}
+.enter__ok {
+	@include sized-sprite($icons, ok);
+}
+.enter__vk {
+	@include sized-sprite($icons, vk);
+}
+.enter__an {
+	@include sized-sprite($icons, an);
+}
+.cart-link {
+	a, i, span {
+		float: left;
+	}
+	a {
+		margin-right: 5px;
+	}
+	i {
+		margin: 1px 6px 0 0;
+		@include sized-sprite($icons, cart);
+	}
+}
+//header
+.header {
+	position: relative;
+	height: 116px;
+}
+.logo {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -140px;
+	@include sized-sprite($icons, logo);
+	a {
+		display: block;
+		width: 281px;
+		height: 94px;
+		@extend %hide-text;
+	}
+}
+.search {
+	position: absolute;
+	top: 45px;
+	right: 25px;
+	width: 238px;
+	height: 25px;
+	padding: 1px;
+	@include background-image(linear-gradient(left, rgba(0,0,0,0.02), rgba(0,0,0,0.2)));
+	@include border-radius(5px);
+	form {
+		width: 238px;
+		height: 25px;
+		background: #fff;
+		@include border-radius(4px);
+	}
+	input, button {
+		height: 25px;
+	}
+	input {
+		float: left;
+		width: 195px;
+		padding-left: 10px;
+		text-align: right;
+	}
+	button {
+		position: relative;
+		float: right;
+		width: 30px;
+		height: 25px;
+		background: #fff;
+		@include border-radius(0 5px 5px 0);
+	}
+	i {
+		position: absolute;
+		top: 3px;
+		right: 10px;
+		@include sized-sprite($icons, search);		
+	}
+}
+//menu
+.menu {
+	padding: 25px 0;
+	margin: 0 25px;
+	border: 1px solid #909191;
+	border-width: 1px 0 2px 0;	
+	ul {
+		overflow: hidden;
+	}
+	li {
+		float: left;
+		height: 17px;
+		line-height: 17px;
+		border-left: 1px solid #c8c8c8;
+		text-align: center;
+		&:first-child {
+			border: none;
+		}
+	}
+	a {
+		font-family: Georgia, Tahoma, sans-serif;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #050000;
+		letter-spacing: -1px;
+		&:hover {
+			color: #d30000;
+		}
+	}
+	.menu__1 {width: 69px; text-align: left;}
+	.menu__11 {width: 60px; text-align: right;}
+}
+.menu__2 {width: 79px;}
+.menu__3 {width: 78px;}
+.menu__4 {width: 56px;}
+.menu__5 {width: 114px;}
+.menu__6 {width: 113px;}
+.menu__7 {width: 75px;}
+.menu__8 {width: 123px;}
+.menu__9 {width: 111px;}
+.menu__10 {width: 118px;}
