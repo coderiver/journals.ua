@@ -1,1 +1,5 @@
-.lteie8 body { background: red; }
+.lteie8 .search form { border: 1px solid #DEDEDE; }
+.lteie8 .search input { line-height: 25px; }
+.lteie8 .menu__sub li, .lteie8 .title li, .lteie8 .publish-house__list li, .lteie8 .partners li { display: inline; zoom: 1; }
+.lteie8 .catalog__items { position: relative; }
+.lteie8 .txt-field input { line-height: 24px; }

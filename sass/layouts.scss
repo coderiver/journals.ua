@@ -2,7 +2,8 @@
 
 /* default layout */
 .cols {
-	margin: 10px 25px 0 25px;
+	margin: 10px 25px;
+	background: url(../img/bg.jpg);
 	overflow: hidden;	
 }
 .col-1 {
@@ -12,10 +13,8 @@
 }
 .col-2 {
 	float: left;
-	width: 578px;
+	width: 580px;
 	padding: 0 10px;
-	border: 1px solid #909191;
-	border-width: 0	1px 0 1px;
 }
 .col-3 {
 	float: right;

@@ -1,1 +1,43 @@
-.about .h2 { text-align: right; }
+.about { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 3px solid #909191; }
+.about .h2 { margin-bottom: 10px; text-align: right; }
+
+.review-articles { margin-bottom: 10px; text-align: center; }
+.review-articles .h2 { margin-bottom: 10px; }
+.review-articles .h3 { color: #000; }
+.review-articles .h3:hover { text-decoration: underline; }
+.review-articles p { margin: 7px 0; }
+.review-articles p span { margin-left: 5px; color: #5b5a5a; }
+
+.review-articles img { -webkit-border-radius: 5px; -moz-border-radius: 5px; -ms-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; }
+
+.aside-news { padding-bottom: 20px; border-bottom: 3px solid #909191; }
+.aside-news li { padding: 10px 0; border-top: 1px solid #e1e1e1; }
+.aside-news li:first-child { border: none; }
+.aside-news li a { color: #3c3c3c; }
+.aside-news li a:hover { text-decoration: underline; }
+.aside-news span { display: block; text-align: right; font-style: italic; color: #909191; }
+
+.aside-news__top { margin-bottom: 5px; overflow: hidden; }
+.aside-news__top .h2 { float: left; }
+.aside-news__top .link-arr { float: right; margin-top: 4px; }
+
+.journal-week { margin-bottom: 5px; padding-bottom: 15px; border-bottom: 3px solid #909191; text-align: center; }
+.journal-week .h2 { padding: 10px 0; }
+.journal-week img { margin-bottom: 15px; }
+
+.journal-week__detail { display: block; color: #5b5a5a; }
+.journal-week__detail span { margin-right: 5px; color: #000; text-decoration: underline; }
+.journal-week__detail:hover { color: #D20000; }
+.journal-week__detail:hover span { color: #D20000; }
+
+.last-comments { padding: 8px 10px; background: #ebebeb; }
+.last-comments .h2 { margin-bottom: 10px; }
+.last-comments ul li { margin-bottom: 15px; }
+.last-comments ul p { margin-bottom: 5px; }
+.last-comments ul p, .last-comments ul a { color: #3c3c3c; }
+.last-comments ul a { margin-right: 1px; font-style: italic; text-decoration: underline; }
+.last-comments ul a:hover { color: #d20000; }
+
+.last-comments__detail { overflow: hidden; }
+.last-comments__detail span { float: right; position: relative; padding-left: 17px; color: #909191; font-style: italic; }
+.last-comments__detail i { position: absolute; top: 2px; left: 0; background: url('../img/icons-s21ce1da975.png') 0 -574px no-repeat; width: 12px; height: 11px; }

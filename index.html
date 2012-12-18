@@ -8,6 +8,9 @@
 	<meta charset="utf-8">
 	<title>Template</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="js/jquery.tools.min.js"></script>
+	<script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>	
+	<script src="js/common.js"></script>
 </head>
 <body>
 <!-- BEGIN .top -->
@@ -55,15 +58,17 @@
 		<div class="search">
 			<form action="">
 				<input type="text" placeholder="Поиск...">
-				<button><i></i></button>
+				<div class="search__btn">
+					<input type="submit" value=""><i></i>
+				</div>
 			</form>
 		</div>
 	</header>
 	<!-- END .header -->
 	<!-- BEGIN .menu -->
 	<nav class="menu">
-		<ul>
-			<li class="menu__1"><a href="#">Бизнес</a></li>
+		<ul class="menu__main">
+			<li class="menu__1"><a class="active" href="#">Бизнес</a></li>
 			<li class="menu__2"><a href="#">В мире</a></li>
 			<li class="menu__3"><a href="#">Газеты</a></li>
 			<li class="menu__4"><a href="#">Дом</a></li>
@@ -79,21 +84,459 @@
 	<!-- END .menu -->
 	<!-- BEGIN .cols -->
 	<div class="cols">
-		<div class="col-1">
+		<section class="col-1">
 			<!-- BEGIN .about -->
 			<div class="about">
 				<h2 class="h2">Journals.ua</h2>
+				<p>Портал «Journals.Ua»  создан для того, чтоб сделать доступ к информации удобным и быстрым, по средствам продажи электронных версий журналов.  Покупая on-line  версии издверсий журналов.  Покупая on-line  версии изданийаний  у нас,  Вы получаете возможность:<br>- быть первооткрывателем Новых Медиа; просто избавиться от пыльных и толстых журнальных подшивок;<br>Портал «Journals.Ua»  создан для того, чтоб сделать доступ  удобным и быстрым, по средствам продажи электронных версий. Покупая on-line  версии изданий нас,  Вы получаете возможность:<br>- быть первооткрывателем Новых Медиа;</p>
 			</div>
 			<!-- END .about -->
+			<!-- BEGIN .review-articles -->
+			<div class="review-articles">
+				<h2 class="h2">Обзор статей</h2>
+				<div class="review-articles__pic">
+					<a href="#"><img src="img/pic1.jpg" alt=""></a>
+				</div>				
+				<a href="#"><h3 class="h3">10 навыков, предпринимателю</h3></a>
+				<p>Бизнес<span>№60 05/2012</span></p>
+				<div class="link-arr">
+					<a href="#">Все обзоры<i></i></a>
+				</div>
+			</div>
+			<!-- END .review-articles -->
+			<!-- BEGIN .social-groups -->
+			<div class="social-groups">
+				<img src="img/pic2.jpg" alt="">
+			</div>
+			<!-- END .social-groups -->
+		</section>
+		<section class="col-2">
+			<!-- BEGIN .title -->
+			<ul class="title">
+				<li><a class="active" href="#">Последние<i></i></a></li>
+				<li><a href="#">Популярные<i></i></a></li>
+				<li><a href="#">Распродажа<i></i></a></li>
+			</ul>
+			<!-- END .title -->
+			<!-- BEGIN .catalog -->
+			<div class="catalog">
+				<div class="catalog__items">
+					<ul>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#">
+									<div class="action">
+										<strong>+</strong>
+										<b>подарок</b>
+									</div>	
+									<img src="img/pic3.jpg" alt="">
+								</a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#">
+									<div class="action">
+										<span><strong>-30</strong>%</span>
+									</div>
+									<img src="img/pic3.jpg" alt="">
+								</a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog__items">
+					<ul>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog__items">
+					<ul>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="catalog__items">
+					<ul>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+						<li>
+							<div class="catalog__title">
+								<a href="#"><span>Металлургические процессы</span>№69-70 05/2012</a>
+							</div>					
+							<div class="catalog__pic">
+								<a href="#"><img src="img/pic3.jpg" alt=""></a>
+							</div>							
+							<div class="catalog__price">
+								<span>26.00 грн.</span>
+								<a href="#">Читать</a>
+							</div>
+							<div class="catalog__detail">
+								<a class="catalog__cart" href="#">В корзину<i></i></a>
+								<a class="catalog__comments" href="#">4<i></i></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- END .catalog -->
+			<!-- BEGIN .pagination -->
+			<div class="pagination">
+				<a class="active" href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">...</a>
+				<a href="#">12</a>
+			</div>
+			<!-- END .pagination -->
+		</section>
+		<section class="col-3">
+			<!-- BEGIN .aside-news -->
+			<div class="aside-news">
+				<div class="aside-news__top">
+					<h2 class="h2">Новости</h2>
+					<div class="link-arr">
+						<a href="#">Все обзоры<i></i></a>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<a href="#">Читайте БЕСПЛАТНО следующий номер журнала«T3» на сайте Journals.ua</a>
+						<span>10 октября</span>
+					</li>
+					<li>
+						<a href="#">Читайте БЕСПЛАТНО следующий номер журнала«T3» на сайте Journals.ua</a>
+						<span>10 октября</span>
+					</li>
+					<li>
+						<a href="#">Читайте БЕСПЛАТНО следующий номер журнала«T3» на сайте Journals.ua</a>
+						<span>10 октября</span>
+					</li>
+				</ul>
+			</div>
+			<!-- END .aside-news -->
+			<!-- BEGIN .journal-week -->
+			<div class="journal-week">
+				<h2 class="h2">Журнал недели</h2>
+				<a href="#"><img src="img/pic4.jpg" alt=""></a>
+				<a class="journal-week__detail" href="#"><span>Корреспондент</span>№69-70 05/2012</a>
+			</div>
+			<!-- END .journal-week -->
+			<!-- BEGIN .last-comments -->
+			<div class="last-comments">
+				<h2 class="h2">Последние комментарии</h2>
+				<ul>
+					<li>
+						<p>Про <a href="#">ELLE 10’12</a>: Отличная статья про дресс-код! Всем настоя- тельно рекомендую!</p>
+						<div class="last-comments__detail">
+							<span>John Doe, 12 октября<i></i></span>
+						</div>						
+					</li>
+					<li>
+						<p>Про <a href="#">ELLE 10’12</a>: Отличная статья про дресс-код! Всем настоя- тельно рекомендую!</p>
+						<div class="last-comments__detail">
+							<span>John Doe, 12 октября<i></i></span>
+						</div>						
+					</li>
+					<li>
+						<p>Про <a href="#">ELLE 10’12</a>: Отличная статья про дресс-код! Всем настоя- тельно рекомендую!</p>
+						<div class="last-comments__detail">
+							<span>John Doe, 12 октября<i></i></span>
+						</div>						
+					</li>
+				</ul>
+				<div class="link-arr">
+					<a href="#">Все<i></i></a>
+					<a class="link-arr__left" href="#">Ответить<i></i></a>
+				</div>
+			</div>
+			<!-- END .last-comments -->
 		</div>
-		<div class="col-2">
-			sdf
-		</div>
-		<div class="col-3">
-			sdf
-		</div>
-	</div>
+	</section>
 	<!-- END .cols -->
+	<!-- BEGIN .go-top -->
+	<div class="go-top">
+		<span>НАВЕРХ</span>
+	</div>
+	<!-- END .go-top -->
+	<!-- BEGIN .footer -->
+	<div class="footer">
+		<!-- BEGIN .best-cover -->		
+		<div class="best-cover">
+			<h2 class="h2">Лучшие обложки</h2>
+			<ul>
+				<li><a href="#"><img src="img/pic5.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/pic5.jpg" alt=""></a></li>
+				<li><a href="#"><img src="img/pic5.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<!-- END .best-cover -->
+		<!-- BEGIN .footer__nav -->
+		<nav class="footer__nav">
+			<ul class="footer__nav-main">
+				<li><a href="#">БИЗНЕС</a></li>
+				<li><a href="#">В МИРЕ</a></li>
+				<li><a href="#">ГАЗЕТЫ</a></li>
+				<li><a href="#">ДОМ</a></li>
+				<li><a href="#">Женщинам</a></li>
+				<li><a href="#">мужчинам</a></li>
+				<li><a href="#">профи</a></li>
+				<li><a href="#">технологии</a></li>
+				<li><a href="#">увлечения</a></li>
+				<li><a href="#">бесплатные</a></li>
+				<li><a href="#">книги</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Новости</a></li>
+				<li><a href="#">О проекте</a></li>
+				<li><a href="#">Приложения</a></li>
+				<li><a href="#">Подписка</a></li>
+				<li><a href="#">Рекламодателям</a></li>
+				<li><a href="#">Издательствам</a></li>
+				<li><a href="#">Партнерские скидки</a></li>
+				<li><a href="#">Партнеры</a></li>
+				<li><a href="#">Подписка</a></li>
+			</ul>
+		</nav>
+		<!-- END .footer__nav -->
+		<!-- BEGIN .payment-methods -->
+		<div class="payment-methods">
+			<span>Способы оплаты:</span>
+			<ul>
+				<li class="payment-methods__1"></li>
+				<li class="payment-methods__2"></li>
+				<li class="payment-methods__3"></li>
+				<li class="payment-methods__4"></li>
+			</ul>
+		</div>
+		<!-- END .payment-methods -->
+	</div>
+	<!-- END .footer -->
 </div>
 <!-- END .wrap -->
 </body>

@@ -1,8 +1,28 @@
 @import "lib/base";
 @import "lib/animations";
 @import "lib/keyframes";
-
+//variables
+$red: #d20000;
 // gradients for ie
 $experimental-support-for-svg: true;
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px);
+//extend
+%btn {
+	height: 22px;
+	border: 1px solid #c8c8c8;
+	background: #fff;
+	@include background-image(linear-gradient(#fff, #f3f3f3));
+	@include border-radius(2px);
+	font-size: 10px;
+	color: #909191;
+	cursor: pointer;
+	&:hover {
+		color: #fff;
+		border: 1px solid #8b0000;
+		background: #e30000;
+		@include background-image(linear-gradient(#e30000, #ad0000));
+		@include border-radius(2px);
+	}
+}
+		

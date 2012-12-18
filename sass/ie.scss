@@ -1,5 +1,24 @@
 .lteie8{
-	body{
-		background:red;
+	.search {
+		form {
+			border: 1px solid #DEDEDE;
+		}
+		input {
+			line-height: 25px;
+		}
+	}
+	.menu__sub, .title, .publish-house__list, .partners {
+		li {
+			display: inline;
+			zoom: 1;
+		}
+	}
+	.catalog__items {
+		position: relative;
+	}
+	.txt-field {
+		input {
+			line-height: 24px;
+		}
 	}
 }

@@ -2,7 +2,143 @@
 //main styles
 //about
 .about {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #909191;
 	.h2 {
+		margin-bottom: 10px;
 		text-align: right;
+	}
+}
+//review-articles
+.review-articles {
+	margin-bottom: 10px;
+	text-align: center;
+	.h2 {
+		margin-bottom: 10px;
+	}
+	.h3 {
+		color: #000;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	p {
+		margin: 7px 0;
+		span {
+			margin-left: 5px;
+			color: #5b5a5a;
+		}
+	}
+}
+.review-articles {
+	img {
+		@include border-radius(5px);
+	}
+}
+//aside-news
+.aside-news {
+	padding-bottom: 20px;
+	border-bottom: 3px solid #909191;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e1e1e1;
+		&:first-child {
+			border: none;
+		}
+		a {
+			color: #3c3c3c;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}	
+	span {
+		display: block;
+		text-align: right;
+		font-style: italic;
+		color: #909191;
+	}
+}
+.aside-news__top {
+	margin-bottom: 5px;
+	overflow: hidden;
+	.h2 {
+		float: left;
+	}
+	.link-arr {
+		float: right;
+		margin-top: 4px;
+	}
+}
+//journal-week 
+.journal-week {
+	margin-bottom: 5px;
+	padding-bottom: 15px;
+	border-bottom: 3px solid #909191;
+	text-align: center;
+	.h2 {
+		padding: 10px 0;
+	}
+	img {
+		margin-bottom: 15px;
+	}
+}
+.journal-week__detail {
+	display: block;
+	color: #5b5a5a;
+	span {
+		margin-right: 5px;
+		color: #000;
+		text-decoration: underline;
+	}
+	&:hover {
+		color: #D20000;
+		span {
+			color: #D20000;
+		}
+	}
+}
+//last-comments
+.last-comments {
+	padding: 8px 10px;
+	background: #ebebeb;
+	.h2 {
+		margin-bottom: 10px;
+	}
+	ul {
+		li {
+			margin-bottom: 15px;
+		}
+		p {
+			margin-bottom: 5px;
+		}
+		p, a {
+			color: #3c3c3c;
+		}
+		a {
+			margin-right: 1px;
+			font-style: italic;
+			text-decoration: underline;
+			&:hover {
+				color: #d20000;
+			}
+		}
+	}	
+}
+.last-comments__detail {
+	overflow: hidden;
+	span {
+		float: right;
+		position: relative;
+		padding-left: 17px;
+		color: #909191;
+		font-style: italic;
+	}
+	i {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		@include sized-sprite($icons, comm);
 	}
 }
