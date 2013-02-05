@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
 //select
-$('.popup__select span').click(function() {
+$('.popup__select span, .cart__select span').click(function() {
 	$(this).next().slideDown(200);
 });
-$('.popup__select li').click(function() {
+$('.popup__select li, .cart__select li').click(function() {
 	var sel_val = $(this).text();
 	$(this).parent().prev().html(sel_val+'<i></i>');
 	$(this).parent().slideUp(200);

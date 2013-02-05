@@ -711,7 +711,7 @@ table {
 		margin-bottom: 5px;
 	}
 }
-.popup__select {
+.popup__select, .cart__select {
 	position: relative;
 	margin-bottom: 25px;
 	span {
@@ -748,5 +748,61 @@ table {
 		&:hover {
 			color: $red;
 		}
+	}
+}
+.cart__select {
+	margin-top: 20px;
+	i {
+		top: 5px;
+		@include sized-sprite($icons, arr3);
+	}
+}
+//discounts
+.popup_discounts {
+	width: 410px;
+	padding: 20px 25px 0 30px;
+	margin-left: -222px;
+}
+.discounts {
+	li {
+		position: relative;
+		min-height: 60px;
+		padding: 0 110px 0 85px;
+		margin-bottom: 20px;
+		button {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin-top: -11px;
+			width: 90px;
+			@extend %btn;	
+		}
+	}
+}
+.discounts__value {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 65px;
+	margin-top: -30px;
+	img {
+		margin-bottom: 3px;
+	}
+	span {
+		display: block;
+		text-align: center;
+		color: #d20000;
+	}
+}
+.discounts__desc {	
+	overflow: hidden;
+	p {		
+		margin-top: 5px;
+		font-size: 12px;
+		color: #000;
+	}
+	a {
+		font-size: 12px;
+		color: #aaa;
 	}
 }
