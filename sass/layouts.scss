@@ -3,8 +3,11 @@
 /* default layout */
 .cols {
 	margin: 10px 25px;
-	background: url(../img/bg.jpg);
+	background: url(../img/bg.jpg) 0 0 repeat-y;
 	overflow: hidden;	
+}
+.cols_mod {
+	background: url(../img/bg2.jpg) 0 0 repeat-y;
 }
 .col-1 {
 	float: left;
@@ -19,4 +22,8 @@
 .col-3 {
 	float: right;
 	width: 190px;
+}
+.col-1-2 {
+	float: left;
+	width: 795px;
 }

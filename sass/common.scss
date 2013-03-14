@@ -7,6 +7,7 @@ body {
 	  weight: normal;
 	  size: 11px;
 	}
+	color: #2d2d2d;
 	-webkit-transform: translate3d(0,0,0);
 	-weblit-backface-visibility: hidden;
 }
@@ -428,6 +429,10 @@ table {
 .title_no-border {
 	border: none;
 }
+.title_width {
+	margin: 10px 25px;
+	padding-right: 13px;
+}
 //catalog
 .catalog {
 	.link-arr {
@@ -711,7 +716,8 @@ table {
 		margin-bottom: 5px;
 	}
 }
-.popup__select, .cart__select {
+.popup__select, 
+.cart__select {
 	position: relative;
 	margin-bottom: 25px;
 	span {
@@ -755,6 +761,18 @@ table {
 	i {
 		top: 5px;
 		@include sized-sprite($icons, arr3);
+	}
+}
+.cart__select_small {
+	span {
+		width: 157px;
+		padding-right: 20px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	ul {
+		width: 177px;
 	}
 }
 //discounts
@@ -804,5 +822,19 @@ table {
 	a {
 		font-size: 12px;
 		color: #aaa;
+	}
+}
+
+.checkbox {
+	input {
+		vertical-align: middle;
+	}
+	span {
+		display: inline-block;
+		margin-left: 6px;
+		cursor: pointer;
+		color: #d20000;
+		border-bottom: 1px solid;
+		vertical-align: middle;
 	}
 }
