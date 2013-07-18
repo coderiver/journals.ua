@@ -140,10 +140,11 @@ table {
 		}
 	}
 }
-.enter__social {
+.enter__social, .social {
 	margin-top: 1px;
 	overflow: hidden;
 	li {
+		float: left;
 		padding: 0;
 		margin: 0 2px 0 0;
 		border: none;
@@ -155,20 +156,23 @@ table {
 		margin-right: 5px;
 	}	
 }
-.enter__fb {
+.enter__fb, .social__fb {
 	@include sized-sprite($icons, fb);
 }
-.enter__gg {
+.enter__gg, .social__gg {
 	@include sized-sprite($icons, gg);
 }
-.enter__ok {
+.enter__ok, .social__ok {
 	@include sized-sprite($icons, ok);
 }
-.enter__vk {
+.enter__vk, .social__vk {
 	@include sized-sprite($icons, vk);
 }
-.enter__an {
+.enter__an, .social__an {
 	@include sized-sprite($icons, an);
+}
+.enter__tw, .social__tw { 
+	@include sized-sprite($icons, tw);
 }
 .cart-link {
 	a, i, span {
@@ -720,6 +724,12 @@ table {
 .cart__select {
 	position: relative;
 	margin-bottom: 25px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	span {
 		position: relative;
 		display: block;
@@ -824,7 +834,7 @@ table {
 		color: #aaa;
 	}
 }
-
+//checkbox
 .checkbox {
 	input {
 		vertical-align: middle;
@@ -836,5 +846,77 @@ table {
 		color: #d20000;
 		border-bottom: 1px solid;
 		vertical-align: middle;
+	}
+}
+//btn-red
+.btn-red {
+	display: inline-block;
+	width: 110px;
+	height: 20px;
+	border: 1px solid #c8c8c8;
+	background: #e30000;
+	@include background-image(linear-gradient(#e30000, #ad0000));
+	@include border-radius(2px);
+	border: 1px solid #8b0000;
+	line-height: 20px;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background: #740000;
+		@include background-image(linear-gradient(#e30000, #740000));
+	}
+}
+//selectichok
+.selectichok {
+	position: relative;
+	display: inline-block;
+	height: 14px;
+	&.active {
+		.selectichok__in {
+			border: 1px solid #acacac;
+			background: #FFF;
+			ul {
+				display: block;
+			}
+		}
+	}	
+}
+.selectichok__in {
+	position: relative;
+	padding: 1px 5px;	
+	border: 1px solid transparent;
+	cursor: pointer;
+	span {
+		position: relative;
+		display: block;
+		padding-right: 15px;
+		margin-bottom: 3px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		text-decoration: underline;
+		color: $red;
+		i {
+			position: absolute;
+			top: 3px;
+			right: 0px;
+			@include sized-sprite($icons, arr1);
+		}
+	}
+	ul {
+		display: none;
+	}
+	li {
+		margin-bottom: 3px;
+		color: #acacac;	
+		text-decoration: underline;
+		&:hover {
+			color: $red;
+		}	
 	}
 }

@@ -348,9 +348,8 @@
 }
 //shop
 .shop {
-	padding: 5px 0 20px 5px;
+	padding: 5px 0 35px 5px;
 	margin-left: -5px;
-	border-bottom: 1px solid #e1e1e1;
 	overflow: hidden;
 }
 .shop__pic {
@@ -358,7 +357,6 @@
 	margin-right: 30px;
 	img {
 		display: block;
-		margin-bottom: 35px;
 		@include box-shadow(rgba(0,0,0,0.5) 0 1px 5px);
 	}
 	li {
@@ -373,11 +371,20 @@
 	}
 }
 .shop__desc {
-	overflow: hidden;
+	float: left;
+	width: 275px;
 	.h2 {
 		color: $red;
 		font-family: Tahoma, Arial, sans-serif;		
 	}
+	p, ul {
+		margin-bottom: 10px;
+	}
+	.social {
+		margin-bottom: 20px;
+	}
+}
+.shop__title {
 	a {		
 		color: $red;
 		text-decoration: underline;
@@ -385,58 +392,106 @@
 			text-decoration: none;
 		}
 	}
-	p, ul {
-		margin-bottom: 10px;
-	}
 }
-.shop__detail {
+.shop__date {
 	padding: 12px 0;
 	color: #909191;	
 }
-.shop__price {
-	margin-bottom: 15px;
-	b {
-		margin: 0 5px;
-		font-size: 14px;
+.shop__down {
+	padding-bottom: 12px;
+	border-bottom: 4px solid #dddede;
+	overflow: hidden;
+	a {
 		color: $red;
 	}
-}
-.shop__comments {
-	position: relative;
-	padding: 0 0 15px 20px;
-	border-bottom: 4px solid #dddede;
-	i {
-		position: absolute;
-		top: 2px;
-		left: 4px;
-		@include sized-sprite($icons, comm);
-	}
-	a {
+	.shop__comm {
+		float: left;
+		position: relative;
+		margin-top: 4px;
+		padding-left: 20px;
 		color: #909191;
 		text-decoration: none;
 		&:hover {
 			text-decoration: underline;
 		}
+		i {
+			position: absolute;
+			top: 2px;
+			left: 4px;
+			@include sized-sprite($icons, comm);
+		}
 	}
-}
-.shop__links {
-	margin-top: 32px;
-	overflow: hidden;
-	a {
+	.shop__cart-link, .shop__read {
 		float: right;
 		margin-left: 30px;
+		text-decoration: underline;
+		font-size: 14px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.shop__cart-link {
+		position: relative;	
+		padding-right: 18px;		
+		i {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			@include sized-sprite($icons, cart2);
+		}
+	}
+}
+.shop__detail {
+	float: right;
+	width: 190px;
+}
+.shop__detail-item {
+	margin-top: 20px;
+	padding: 20px 10px 0;
+	border-top: 1px solid #e1e1e1;
+	&:first-child {
+		padding: 0 10px;
+		margin-top: 0;
+		border: none;
+	}	
+}
+.shop__detail-title {
+	font-size: 12px;
+}
+.shop__price {
+	padding: 10px 0;
+	strong {
+		margin: 0 5px;
+		color: $red;
 		font-size: 14px;
 	}
 }
-.shop__cart-link {
-	position: relative;	
-	padding-right: 18px;
-	i {
-		position: absolute;
-		top: 5px;
-		right: 0;
-		@include sized-sprite($icons, cart2);
+//apps
+.apps {
+	padding-top: 10px;
+	overflow: hidden;
+	a {
+		float: left;
+		margin-left: 5px;
+		&:first-child {
+			margin-left: 0;
+		}
 	}
+}
+.apps__item-1 {
+	@include sized-sprite($icons, apps1);
+}
+.apps__item-2 {
+	@include sized-sprite($icons, apps2);
+}
+.apps__item-3 {
+	@include sized-sprite($icons, apps3);
+}
+.apps__item-4 {
+	@include sized-sprite($icons, apps4);
+}
+.apps__item-5 {
+	@include sized-sprite($icons, apps5);
 }
 //catalog_last
 .catalog_last {
@@ -455,6 +510,7 @@
 			border-bottom: 1px solid #e1e1e1;
 		}
 		li {
+			margin-left: 32px;
 			border: none;
 		}
 	}
@@ -489,12 +545,12 @@
 		margin-bottom: 10px;
 	}
 	textarea {
-		width: 440px;
-		max-width: 440px;
+		width: 669px;
 		height: 75px;
 		padding: 7px;
 		margin-bottom: 12px;
 		border: 1px solid #c8c8c8;
+		resize: vertical;
 	}
 	input {
 		width: 130px;
@@ -502,11 +558,13 @@
 	}
 }
 .add-comments__date {
+	padding-right: 10px;
 	text-align: right;
 	color: #909191;
 	span {
 		position: relative;
 		padding-left: 23px;
+		font-style: italic;
 	}
 	i {
 		position: absolute;

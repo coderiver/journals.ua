@@ -9,6 +9,13 @@
 .cols_mod {
 	background: url(../img/bg2.jpg) 0 0 repeat-y;
 }
+.cols_mod-1 {
+	background: url(../img/bg3.jpg) 0 0 repeat-y;
+	.col-2 {
+		width: 795px;
+		padding-right: 0;
+	}
+}
 .col-1 {
 	float: left;
 	width: 190px;
